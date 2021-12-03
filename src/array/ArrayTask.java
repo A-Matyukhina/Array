@@ -18,11 +18,7 @@ public class ArrayTask {
         int[] myArray = new int[10];
         for (int i = 0; i < myArray.length; i++) {
             myArray[i] = 10 + rand.nextInt(100 - 10 + 1);
-//            System.out.print(myArray[i] + " ");
             System.out.print("\t" + myArray[i]);
-//            if(i == myArray.length - 1){ // I can't do
-//                System.out.println("\n");
-//            }
         }
         System.out.println();
 
@@ -48,16 +44,15 @@ public class ArrayTask {
         int max = myArray[0];
         int min = myArray[0];
 
-        for(int i = 0; i < myArray.length; i++){
-            if(max < myArray[i]) {
+        for (int i = 0; i < myArray.length; i++) {
+            if (max < myArray[i]) {
                 max = myArray[i];
             }
-            if(min > myArray[i]){
+            if (min > myArray[i]) {
                 min = myArray[i];
             }
         }
-        //TODO: English!
-        System.out.println("\n" + "Самый большой элемент массива: " + max);
-        System.out.println("Самый маленький элемент массива: " + min);
+        System.out.println("\n" + "Largest element of the array: " + max);
+        System.out.println("Smallest element of the array: " + min);
     }
 }
