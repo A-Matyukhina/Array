@@ -8,11 +8,13 @@ public class TV {
 
     public TV() {
     }
-
+    /*
+    Избавиться от слова this в классе TV
+    */
     public TV(String model, double diagonal, double price) {
-        this.model = model;
-        this.diagonal = diagonal;
-        this.price = price;
+        setModel(model);
+        setDiagonal(diagonal);
+        setPrice(price);
     }
 
     public String getModel() {
@@ -20,7 +22,7 @@ public class TV {
     }
 
     public void setModel(String model) {
-        this.model = model;
+        setModel(model);
     }
 
     public double getDiagonal() {
@@ -28,7 +30,7 @@ public class TV {
     }
 
     public void setDiagonal(double diagonal) {
-        this.diagonal = diagonal;
+        setDiagonal(diagonal);
     }
 
     public double getPrice() {
@@ -36,6 +38,6 @@ public class TV {
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        setPrice(price);
     }
 }
