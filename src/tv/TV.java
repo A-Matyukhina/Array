@@ -21,23 +21,23 @@ public class TV {
         return model;
     }
 
-    public void setModel(String model) {
-        setModel(model);
+    public void setModel(String newModel) {
+        model = newModel;
     }
 
     public double getDiagonal() {
         return diagonal;
     }
 
-    public void setDiagonal(double diagonal) {
-        setDiagonal(diagonal);
+    public void setDiagonal(double newDiagonal) {
+        diagonal = newDiagonal;
     }
 
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        setPrice(price);
+    public void setPrice(double newPrice) {
+        price = newPrice;
     }
 }
