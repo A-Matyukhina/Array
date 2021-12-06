@@ -2,6 +2,7 @@ package buyers;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /*
 6.
 Определить интерфейс Покупатель с методом оставитьОтзыв()
@@ -24,8 +25,8 @@ public class ReviewsPage {
         buyerList.add(satisfiedBuyer);
         buyerList.add(usualBuyer);
 
-        List<?extends Buyers> buyers = buyerList;
-        for(Buyers tmp : buyers){
+        List<? extends Buyers> buyers = buyerList;
+        for (Buyers tmp : buyers) {
             tmp.leaveReview();
         }
     }

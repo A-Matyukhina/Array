@@ -1,15 +1,17 @@
 package buyers;
 
-public class Buyer implements Buyers{
+public class Buyer implements Buyers {
 
     private String review;
 
     public Buyer(String review) {
         setReview(review);
     }
+
     public String getReview() {
         return review;
     }
+
     public void setReview(String newReview) {
         review = newReview;
     }
