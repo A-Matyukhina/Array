@@ -23,6 +23,13 @@ public class CountDown {
             long diff = lastDay.getTime() - today.getTime();
             days = (int) (diff / (24 * 60 * 60 * 1000)); //from milliseconds to days
             System.out.println("До Нового Года осталось: " + days + " дней");
+
+            long afterDays = diff - ((long) days * 24 * 60 * 60 * 1000);
+            System.out.println("...and " + afterDays + " milliseconds");
+
+            int hours = (int) (afterDays / (60 * 60 * 1000));
+            System.out.println("Иными словами, до Нового Года осталось: " + days + " дней и " + hours + " часов");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
