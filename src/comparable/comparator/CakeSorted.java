@@ -2,6 +2,7 @@ package comparable.comparator;
 /*
 Отсортировать какую-либо коллекцию при помощи Comparable и Comparator.
  */
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -20,18 +21,20 @@ public class CakeSorted {
         comparableSort(cakeList);
         comparatorSort(cakeList);
     }
-    public static void comparableSort(List<sort> cakeList){
+
+    public static void comparableSort(List<sort> cakeList) {
         ArrayList<sort> cakes = new ArrayList<>(cakeList);
         Collections.sort(cakes);
-        for(sort tmp : cakes){
+        for (sort tmp : cakes) {
             System.out.println("Title: " + tmp.getName() + ", weight: " + tmp.getWeight());
         }
         System.out.println();
     }
-    public static void comparatorSort(List<sort> cakeList){
+
+    public static void comparatorSort(List<sort> cakeList) {
         List<sort> cakes = new ArrayList<>(cakeList);
         Collections.sort(cakes, new SortByComparator());
-        for(sort tmp : cakes){
+        for (sort tmp : cakes) {
             System.out.println("Title: " + tmp.getName() + ", weight: " + tmp.getWeight());
         }
     }

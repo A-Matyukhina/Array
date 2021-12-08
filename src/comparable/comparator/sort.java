@@ -1,6 +1,6 @@
 package comparable.comparator;
 
-public class sort implements Comparable{
+public class sort implements Comparable {
 
     private String name;
     private double weight;
@@ -21,7 +21,8 @@ public class sort implements Comparable{
         weight = newWeight;
     }
 
-    public sort() {}
+    public sort() {
+    }
 
     public sort(String name, double weight) {
         setName(name);
