@@ -14,15 +14,19 @@ public class MinPriceModel {
 
     public static void main(String[] args) {
 
-        List<Goods> goodsList = new ArrayList<>();
-        goodsList.add(new TV("Samsung", 56980.0, 134.0));
-        goodsList.add(new Fridge("Sharp", 123999.99, 180.0));
-        goodsList.add(new TV("LG", 78400.0, 128.0));
-        goodsList.add(new Fridge("LG", 99799.0, 189.2));
+        List<Product> productList = new ArrayList<>();
+        productList.add(new TV("Samsung", 56980.0, 134.0));
+        productList.add(new Fridge("Sharp", 123999.99, 180.0));
+        productList.add(new TV("LG", 78400.0, 128.0));
+        productList.add(new Fridge("LG", 99799.0, 189.2));
 
-        double minPrice = goodsList.get(0).getPrice();
+        double minPrice = productList.get(0).getPrice();
         String minModel = null;
-        for (Goods tmp : goodsList) {
+
+        for (Product tmp : productList) {
+
+            //tmp.getDiagonal(); <-- TODO добраться до диагонали для тех, кто на самом деле объекты ТВ
+
             if(tmp.getPrice() < minPrice){
                 minPrice = tmp.getPrice();
             }

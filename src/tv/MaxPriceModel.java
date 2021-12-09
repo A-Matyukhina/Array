@@ -30,6 +30,8 @@ public class MaxPriceModel {
         }
         System.out.println("Model: " + maxModel + ", price " + maxPrice);
 
+        //TODO as discussed, avoid complex loop within  a loop (nested loops)
+
         String maxModel2 = null;
 //        for (int i = 0; i < tvs.size(); i++) {
 //            for (int j = i + 1; j < tvs.size(); i++) {

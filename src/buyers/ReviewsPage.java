@@ -11,7 +11,21 @@ import java.util.List;
 Опросить всех по очереди и получить разные отзывы.
  */
 public class ReviewsPage {
+
     public static void main(String[] args) {
+        List<Client> clients = new ArrayList<>();
+        clients.add(new HappyClient());
+        clients.add(new AngryClient());
+        var someClient = new HappyClient();
+        clients.add(someClient);
+
+        for (Client c: clients) {
+            c.leaveReview();
+        }
+    }
+
+
+    public static void old(String[] args) {
 
         Buyer angryBuyer = new Buyer("This is worst shop I've ever seen! " +
                 "The goods I received is broken and i can do nothing " +
@@ -29,5 +43,7 @@ public class ReviewsPage {
         for (Buyers tmp : buyers) {
             tmp.leaveReview();
         }
+
+//        List<Buyers> testBuyers = buyerList;
     }
 }

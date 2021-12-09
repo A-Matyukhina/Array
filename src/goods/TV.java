@@ -1,12 +1,12 @@
 package goods;
 
-public class TV extends Goods{
+public class TV extends Product {
 
     private double diagonal;
 
     public TV(String model, double price, double diagonal) {
         super(model, price);
-        setDiagonal(diagonal);
+        this.diagonal = diagonal;
     }
 
     public double getDiagonal() {

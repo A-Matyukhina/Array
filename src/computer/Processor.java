@@ -1,5 +1,6 @@
 package computer;
 
+
 public class Processor extends Computer {
 
     public Processor(String model) {
@@ -9,3 +10,11 @@ public class Processor extends Computer {
     public Processor() {
     }
 }
+
+/*
+    Processor extends Computer
+    ==
+    Процессор ЯВЛЯЕТСЯ типом компьютера
+    ( и это не так!)
+    "IS-A"
+ */
