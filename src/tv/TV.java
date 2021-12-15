@@ -6,15 +6,13 @@ public class TV {
     private double diagonal;
     private double price;
 
-    public TV() {
-    }
     /*
     Избавиться от слова this в классе TV
     */
-    public TV(String model, double diagonal, double price) {
-        setModel(model);
-        setDiagonal(diagonal);
-        setPrice(price);
+    public TV(String m, double d, double p) {
+        model = m;
+        diagonal = d;
+        price = p;
     }
 
     public String getModel() {
@@ -22,7 +20,9 @@ public class TV {
     }
 
     public void setModel(String newModel) {
-        model = newModel;
+        if (!newModel.isEmpty()) {
+            model = newModel;
+        }
     }
 
     public double getDiagonal() {

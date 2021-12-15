@@ -1,6 +1,6 @@
 package goods;
 
-public class TV extends Goods{
+public class TV extends Product {
 
     private double diagonal;
 

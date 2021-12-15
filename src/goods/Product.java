@@ -1,16 +1,16 @@
 package goods;
 
-public class Goods {
+public class Product {
 
     private String model;
     private double price;
 
-    public Goods(String model, double price) {
-        setModel(model);
-        setPrice(price);
+    public Product(String model, double price) {
+        this.model = model;
+        this.price = price;
     }
 
-    public Goods() {
+    public Product() {
     }
 
     public String getModel() {

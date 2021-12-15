@@ -1,11 +1,18 @@
 package computer;
 
-public class Processor extends Computer {
+public class Processor{
 
-    public Processor(String model) {
-        super(model);
+    private String name;
+
+    public Processor(String name) {
+        this.name = name;
     }
 
-    public Processor() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

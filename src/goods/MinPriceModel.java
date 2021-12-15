@@ -7,6 +7,7 @@ package goods;
 В коллекции хранить телевизоры и холодильники.
 Вывести на экран самый дешевый Товар.
  */
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,20 +15,30 @@ public class MinPriceModel {
 
     public static void main(String[] args) {
 
-        List<Goods> goodsList = new ArrayList<>();
-        goodsList.add(new TV("Samsung", 56980.0, 134.0));
-        goodsList.add(new Fridge("Sharp", 123999.99, 180.0));
-        goodsList.add(new TV("LG", 78400.0, 128.0));
-        goodsList.add(new Fridge("LG", 99799.0, 189.2));
+        List<Product> productList = new ArrayList<>();
+        productList.add(new TV("Samsung", 56980.0, 134.0));
+        productList.add(new Fridge("Sharp", 123999.99, 180.0));
+        productList.add(new TV("LG", 78400.0, 128.0));
+        productList.add(new Fridge("LG", 99799.0, 189.2));
 
-        double minPrice = goodsList.get(0).getPrice();
+        double minPrice = productList.get(0).getPrice();
         String minModel = null;
-        for (Goods tmp : goodsList) {
-            if(tmp.getPrice() < minPrice){
+        double additionalPar = 0; // additional parameter for Product.
+        Class productName = null;
+        for (Product tmp : productList) {
+            if (tmp.getPrice() <= minPrice) {
                 minPrice = tmp.getPrice();
+                minModel = tmp.getModel();
+            } else {
+                continue;
             }
-            minModel = tmp.getModel();
+            if (tmp instanceof TV) {                          // Checking condition if tmp belongs to TV. If yes
+                additionalPar = ((TV) tmp).getDiagonal();   // we should get the necessary field's data from TV class
+            } else {                                         // if no
+                additionalPar = ((Fridge) tmp).getHeight(); // we should get the necessary field's data from another class.
+            }
+            productName = tmp.getClass();
+            System.out.println("The cheapest product model: " + minModel + ", price - " + minPrice + ", diagonal/height - " + additionalPar + ", " + productName);
         }
-        System.out.println("The cheapest product model: " + minModel + ", price " + minPrice);
     }
 }

@@ -1,19 +1,22 @@
 package goods;
 
-public class Fridge extends Goods{
+public class Fridge extends Product {
 
-    private double high;
+    private double height;
 
-    public Fridge(String model, double price, double high) {
+    public Fridge(String model, double price, double height) {
         super(model, price);
-        setHigh(high);
+        setHeight(height);
     }
 
-    public double getHigh() {
-        return high;
+    public Fridge() {
     }
 
-    public void setHigh(double newHigh) {
-        high = newHigh;
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double newHeight) {
+        height = newHeight;
     }
 }

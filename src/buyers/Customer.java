@@ -1,6 +1,6 @@
 package buyers;
 
-public interface Buyers {
+public interface Customer {
 
     public void leaveReview();
 }
