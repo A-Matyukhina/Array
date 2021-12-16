@@ -1,10 +1,8 @@
 package computer;
 
-public class Processor{
+public class Processor extends Computer {
 
     private String name;
-
-public class Processor extends Computer {
 
     public Processor(String name) {
         this.name = name;

@@ -39,19 +39,21 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a processor's model: ");
         System.out.println("This computer has processor: " + getModelProcessor(comp, sc.nextLine()));
-        System.out.println(getNameByComputerModel(comp1));
-        System.out.println(getNameByComputerModel(comp2));
-        System.out.println(getNameByComputerModel(comp3));
+//        System.out.println(getNameByComputerModel(comp1));
+//        System.out.println(getNameByComputerModel(comp2));
+//        System.out.println(getNameByComputerModel(comp3));
     }
 
-    private static String getModelProcessor(Map<String,String> comp, String model){
+    private static String getModelProcessor(Map<String,String> comp, String model) {
         String tmp2 = null;
-        for(Map.Entry<String, String> tmp : comp.entrySet()){
-            if(model.equals(tmp.getValue())){
+        for (Map.Entry<String, String> tmp : comp.entrySet()) {
+            if (model.equals(tmp.getValue())) {
                 tmp2 = tmp.getKey();
             }
         }
         return tmp2;
+    }
+
     private static String getNameByComputerModel(Computer computer) { // Method which getting back CPUname by Computer Model.
         return computer.getCpu().getName();
     }

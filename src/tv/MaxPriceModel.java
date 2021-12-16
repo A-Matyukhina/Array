@@ -21,7 +21,7 @@ public class MaxPriceModel {
         tvs.add(new TV("Sharp", 128.0, 78500.0));
 
         double maxPrice = Double.MIN_VALUE;
-//        String maxModel = null;
+        String maxModel = null;
         for (TV tmp : tvs) {
             if (tmp.getPrice() > maxPrice) {
                 maxPrice = tmp.getPrice();
@@ -39,21 +39,23 @@ public class MaxPriceModel {
 //                    maxModel2 = tvs.get(j).getModel();
 //                }
 //            }
-        for (TV tmp : tvs) {
-            for (TV tmp2 : tvs) {
-                if (tmp.getPrice() == tmp2.getPrice()) {
-                    maxModel2 = tmp.getModel();
-                    if (maxModel2 != maxModel) {
-                        System.out.println("One more model with such price is: " + maxModel2);
-                    }
-                } else {
-                    break;
-                }
-            } else {
-                continue;
-            }
-//            maxModel = tmp.getModel();
-        }
+
+//        for (TV tmp : tvs) {
+//            for (TV tmp2 : tvs) {
+//                if (tmp.getPrice() == tmp2.getPrice()) {
+//                    maxModel2 = tmp.getModel();
+//                    if (maxModel2 != maxModel) {
+//                        System.out.println("One more model with such price is: " + maxModel2);
+//                    }
+//                } else {
+//                    break;
+//                }
+//            } else {
+//                continue;
+//            }
+////            maxModel = tmp.getModel();
+//        }
+
         for (TV tmp : tvs) {
             if (tmp.getPrice() == maxPrice) {
                 System.out.println("The model of the most expensive TV: " + tmp.getModel() + " price: " + tmp.getPrice());
