@@ -1,21 +1,31 @@
 package computer;
 
-public class Computer {
+public class Computer{
 
+    private Processor cpu;
     private String model;
 
-    public Computer(String model) {
-        setModel(model);
+    public Computer(Processor cpu, String model) {
+        this.cpu = cpu;
+        this.model = model;
     }
 
     public Computer() {
+    }
+
+    public Processor getCpu() {
+        return cpu;
+    }
+
+    public void setCpu(Processor cpu) {
+        this.cpu = cpu;
     }
 
     public String getModel() {
         return model;
     }
 
-    public void setModel(String newModel) {
-        model = newModel;
+    public void setModel(String model) {
+        this.model = model;
     }
 }

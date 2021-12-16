@@ -13,7 +13,7 @@ public class Fridge extends Product {
         return height;
     }
 
-    public void setHeight(double newHigh) {
-        height = newHigh;
+    public void setHeight(double newHeight) {
+        height = newHeight;
     }
 }

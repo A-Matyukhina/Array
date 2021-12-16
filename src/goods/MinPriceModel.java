@@ -7,6 +7,7 @@ package goods;
 В коллекции хранить телевизоры и холодильники.
 Вывести на экран самый дешевый Товар.
  */
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,17 +22,23 @@ public class MinPriceModel {
         productList.add(new Fridge("LG", 99799.0, 189.2));
 
         double minPrice = productList.get(0).getPrice();
-        String minModel = null;
-
+        String minModel;
+        double additionalPar = 0; // additional parameter for Product.
+        String productName;
         for (Product tmp : productList) {
-
-            //tmp.getDiagonal(); <-- TODO добраться до диагонали для тех, кто на самом деле объекты ТВ
-
-            if(tmp.getPrice() < minPrice){
+            if (tmp.getPrice() <= minPrice) {
                 minPrice = tmp.getPrice();
+                minModel = tmp.getModel();
+            } else {
+                continue;
             }
-            minModel = tmp.getModel();
+            if (tmp instanceof TV) {                          // Checking condition if tmp belongs to TV. If yes
+                additionalPar = ((TV) tmp).getDiagonal();   // we should get the necessary field's data from TV class
+            } else {                                         // if no
+                additionalPar = ((Fridge) tmp).getHeight(); // we should get the necessary field's data from another class.
+            }
+            productName = tmp.getClass().getSimpleName();
+            System.out.println("The cheapest product model: " + minModel + ", price - " + minPrice + ", diagonal/height - " + additionalPar + ", " + productName);
         }
-        System.out.println("The cheapest product model: " + minModel + ", price " + minPrice);
     }
 }
