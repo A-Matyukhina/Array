@@ -22,9 +22,9 @@ public class MinPriceModel {
         productList.add(new Fridge("LG", 99799.0, 189.2));
 
         double minPrice = productList.get(0).getPrice();
-        String minModel = null;
+        String minModel;
         double additionalPar = 0; // additional parameter for Product.
-        Class productName = null;
+        String productName;
         for (Product tmp : productList) {
             if (tmp.getPrice() <= minPrice) {
                 minPrice = tmp.getPrice();
@@ -37,7 +37,7 @@ public class MinPriceModel {
             } else {                                         // if no
                 additionalPar = ((Fridge) tmp).getHeight(); // we should get the necessary field's data from another class.
             }
-            productName = tmp.getClass();
+            productName = tmp.getClass().getSimpleName();
             System.out.println("The cheapest product model: " + minModel + ", price - " + minPrice + ", diagonal/height - " + additionalPar + ", " + productName);
         }
     }
