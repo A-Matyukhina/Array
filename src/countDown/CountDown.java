@@ -17,7 +17,8 @@ public class CountDown {
 
 
     public static void main(String[] args) {
-        showHowDaysTillNewYear();
+//        showHowDaysTillNewYear();
+        daysTillNewYearNewVersion();
     }
 
     public static void showHowDaysTillNewYear() {
@@ -59,5 +60,21 @@ public class CountDown {
         long minutes = absoluteDiffInMillis % DAYS % HOURS / MINUTES;
         long seconds = absoluteDiffInMillis % DAYS % HOURS % MINUTES / SECONDS;
         System.out.println(days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds");
+    }
+    private static void daysTillNewYearNewVersion() {
+        LocalDateTime newYear = LocalDateTime.of(LocalDate.of(2022, 01, 01), LocalTime.MIDNIGHT);
+        LocalDateTime today = LocalDateTime.now();
+
+        ZonedDateTime newYearZone = newYear.atZone(ZoneId.systemDefault());
+        ZonedDateTime todayZone = today.atZone(ZoneId.systemDefault());
+
+        long diff = newYearZone.toInstant().toEpochMilli() - todayZone.toInstant().toEpochMilli();
+        long daysBefore = diff / DAYS;
+        long hoursBefore = diff % DAYS / HOURS;
+        long minutesBefore = diff % DAYS % HOURS / MINUTES;
+        long secondsBefore = diff % DAYS % HOURS % MINUTES / SECONDS;
+        System.out.println("There is " + daysBefore + " days " + hoursBefore + " hours " + minutesBefore
+                + " minutes and " + secondsBefore + " seconds till the New Year.");
+
     }
 }
