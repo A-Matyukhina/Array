@@ -1,7 +1,12 @@
 package Exception;
 
 import java.util.Scanner;
-
+/*
+Пользователь должен ввести число с консоли.
+Если не получилось прочитать число (исключение!),
+сообщить об этом пользователю и повторить ввод.
+Повторять до тех пор, пока не сможем успешно прочитать число.
+ */
 public class InputNumber {
     public static void main(String[] args) {
         endlessLoopTillSuccess();

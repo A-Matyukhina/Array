@@ -6,7 +6,13 @@ import java.util.Random;
 public class ArrayTask {
 
     public static void main(String[] args) {
+        int[] myArray = {1, 3, 50, 10, 2};
+//        shouldToResearchArray(myArray);
+//        shouldToResearchArray2(myArray);
+        shouldToResearchArray3(myArray);
+    }
 
+    public static void homeWorkWithArray() {
         /*
         Создать массив из 10 целых чисел.
         Заполнить его случайно сгенерированными значениями от 10 до 100.
@@ -54,5 +60,46 @@ public class ArrayTask {
         }
         System.out.println("\n" + "Largest element of the array: " + max);
         System.out.println("Smallest element of the array: " + min);
+    }
+
+    /*
+    Исследовать массивы в джаве, понять, меняется ли массив, если
+    1) присвоить его второй переменной
+    2) передать в метод и там изменить - так, как мы смотрели с инт и объектами. int[]
+     */
+    public static void shouldToResearchArray(int[] array) {
+        int[] newArray = array;
+        for (int i : newArray) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+    }
+
+    public static void shouldToResearchArray2(int[] array) {
+        int[] newArray = new int[4];
+        System.arraycopy(array, 0, newArray, 0, array.length - 1);
+        for (int i : newArray) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+    }
+
+    public static void shouldToResearchArray3(int[] array) {
+        int[] newArray = array;
+        newArray[0] = 4;
+        newArray[3] = 9;
+        for (int i : newArray) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
     }
 }
