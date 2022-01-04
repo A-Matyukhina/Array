@@ -25,18 +25,20 @@ public class InputNumber {
         }
     }
 
+    //TODO write another option with `do-while`; then the third one with `for(;;)`
     public static void endlessLoopTillSuccess(){
         Scanner sc = new Scanner(System.in);
-        while (true) {
+        while (true) { // <-- TODO here use this boolean
             try {
                 System.out.println("Enter a number");
                 int number = sc.nextInt();
-                break;
+                System.out.println("Your number: " + number);
+                break; // TODO use boolean instead of `break`
             } catch (Exception e) {
                 System.out.println("Attention! Enter a number, please! Try again.");
-                sc.next();
+//                String prev = sc.next();
+//                System.out.println(prev);
             }
         }
     }
 }
-

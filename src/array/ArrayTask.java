@@ -6,10 +6,15 @@ import java.util.Random;
 public class ArrayTask {
 
     public static void main(String[] args) {
-        int[] myArray = {1, 3, 50, 10, 2};
+        int[] myArray = {1, 3, 50, 10, 2}; // 1
 //        shouldToResearchArray(myArray);
 //        shouldToResearchArray2(myArray);
         shouldToResearchArray3(myArray);
+
+        int testInt = 10;
+        changeAnInteger(testInt);
+        System.out.println(testInt == 11);
+
     }
 
     public static void homeWorkWithArray() {
@@ -90,8 +95,8 @@ public class ArrayTask {
         }
     }
 
-    public static void shouldToResearchArray3(int[] array) {
-        int[] newArray = array;
+    public static void shouldToResearchArray3(int[] array) { // 2
+        int[] newArray = array; // 2 = 3
         newArray[0] = 4;
         newArray[3] = 9;
         for (int i : newArray) {
@@ -101,5 +106,9 @@ public class ArrayTask {
         for (int i : array) {
             System.out.print(i + " ");
         }
+    }
+
+    public static void changeAnInteger(int input) {
+        input++;
     }
 }
