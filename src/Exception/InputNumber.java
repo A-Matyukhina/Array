@@ -1,6 +1,7 @@
 package Exception;
 
 import java.util.Scanner;
+
 /*
 Пользователь должен ввести число с консоли.
 Если не получилось прочитать число (исключение!),
@@ -31,7 +32,7 @@ public class InputNumber {
     }
 
     //TODO write another option with `do-while`; then the third one with `for(;;)`
-    public static void endlessLoopTillSuccess(){
+    public static void endlessLoopTillSuccess() {
         Scanner sc = new Scanner(System.in);
         while (true) { // <-- TODO here use this boolean
             try {

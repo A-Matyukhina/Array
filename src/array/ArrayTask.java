@@ -9,7 +9,7 @@ public class ArrayTask {
         int[] myArray = {1, 3, 50, 10, 2}; // 1
 //        shouldToResearchArray(myArray);
 //        shouldToResearchArray2(myArray);
-//        shouldToResearchArray3(myArray);
+        shouldToResearchArray3(myArray);
         System.out.println();
         for (int i : myArray) {
             System.out.print(i + " ");
