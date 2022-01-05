@@ -9,12 +9,11 @@ public class ArrayTask {
         int[] myArray = {1, 3, 50, 10, 2}; // 1
 //        shouldToResearchArray(myArray);
 //        shouldToResearchArray2(myArray);
-        shouldToResearchArray3(myArray);
-
-        int testInt = 10;
-        changeAnInteger(testInt);
-        System.out.println(testInt == 11);
-
+//        shouldToResearchArray3(myArray);
+        System.out.println();
+        for (int i : myArray) {
+            System.out.print(i + " ");
+        }
     }
 
     public static void homeWorkWithArray() {
@@ -106,9 +105,5 @@ public class ArrayTask {
         for (int i : array) {
             System.out.print(i + " ");
         }
-    }
-
-    public static void changeAnInteger(int input) {
-        input++;
     }
 }
