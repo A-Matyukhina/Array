@@ -9,7 +9,12 @@ import java.util.Scanner;
  */
 public class InputNumber {
     public static void main(String[] args) {
-        endlessLoopTillSuccess();
+        InputNumberNonStatic nonStatic = new InputNumberNonStatic();
+//        nonStatic.endlessLoopWithBoolean2();
+//        nonStatic.endlessLoopWithFor();
+//        nonStatic.endlessLoopWithDoWhile();
+//        endlessLoopTillSuccess();
+
     }
 
     public static void endlessLoop() {
@@ -41,4 +46,5 @@ public class InputNumber {
             }
         }
     }
+
 }
