@@ -101,41 +101,43 @@ public class InputNumberNonStatic {
             }
         }
     }
-    public void endlessLoopWithBooleanOldWrongVersion(){
+
+    public void endlessLoopWithBooleanOldWrongVersion() {
         boolean isNotNumber = false;
-        while(!isNotNumber){
-            try{
+        while (!isNotNumber) {
+            try {
                 System.out.println("Enter a number: ");
                 int number = sc.nextInt();
-                if(number < 0){
+                if (number < 0) {
                     System.out.println("Your number is - " + number + " this is a negative number.");
-                }else if(number > 0){
+                } else if (number > 0) {
                     System.out.println("Your number is - " + number + " this is a positive number.");
-                }else{
+                } else {
                     System.out.println("You number is - " + number + " Oh! This is zero!");
                 }
                 isNotNumber = sc.hasNextInt();
-            }catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("You should have type a number! Please, try again!");
                 sc.next();
             }
         }
     }
-    public void endlessLoopWithBooleanOldWrongVersion2(){
+
+    public void endlessLoopWithBooleanOldWrongVersion2() {
         boolean isNumber = sc.hasNextInt();
-        while(!isNumber){
-            try{
+        while (!isNumber) {
+            try {
                 System.out.println("Enter a number: ");
                 int number = sc.nextInt();
-                if(number < 0){
+                if (number < 0) {
                     System.out.println("Your number is - " + number + " this is a negative number.");
-                }else if(number > 0){
+                } else if (number > 0) {
                     System.out.println("Your number is - " + number + " this is a positive number.");
-                }else{
+                } else {
                     System.out.println("You number is - " + number + " Oh! This is zero!");
                 }
                 isNumber = true;
-            }catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("You should have type a number! Please, try again!");
                 sc.next();
             }
