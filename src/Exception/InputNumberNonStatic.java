@@ -60,9 +60,9 @@ public class InputNumberNonStatic {
         } while (true);
     }
 
-    public void endlessLoopWithBoolean() {
-        boolean isNotNumber = false;
-        while (!isNotNumber) {
+    public void endlessLoopWithDoWhileBoolean() {
+        boolean isNumber = false;
+        do {
             try {
                 System.out.println("Enter a number: ");
                 int number = sc.nextInt();
@@ -73,16 +73,16 @@ public class InputNumberNonStatic {
                 } else {
                     System.out.println("You number is - " + number + " Oh! This is zero!");
                 }
-                isNotNumber = sc.hasNextInt();
+                isNumber = true;
             } catch (Exception e) {
                 System.out.println("You should have type a number! Please, try again!");
                 sc.next();
             }
-        }
+        } while (!isNumber);
     }
 
-    public void endlessLoopWithBoolean2() {
-        boolean isNumber = sc.hasNextInt();
+    public void endlessLoopWithBoolean() {
+        boolean isNumber = false;
         while (!isNumber) {
             try {
                 System.out.println("Enter a number: ");
@@ -96,6 +96,46 @@ public class InputNumberNonStatic {
                 }
                 isNumber = true;
             } catch (Exception e) {
+                System.out.println("You should have type a number! Please, try again!");
+                sc.next();
+            }
+        }
+    }
+    public void endlessLoopWithBooleanOldWrongVersion(){
+        boolean isNotNumber = false;
+        while(!isNotNumber){
+            try{
+                System.out.println("Enter a number: ");
+                int number = sc.nextInt();
+                if(number < 0){
+                    System.out.println("Your number is - " + number + " this is a negative number.");
+                }else if(number > 0){
+                    System.out.println("Your number is - " + number + " this is a positive number.");
+                }else{
+                    System.out.println("You number is - " + number + " Oh! This is zero!");
+                }
+                isNotNumber = sc.hasNextInt();
+            }catch(Exception e){
+                System.out.println("You should have type a number! Please, try again!");
+                sc.next();
+            }
+        }
+    }
+    public void endlessLoopWithBooleanOldWrongVersion2(){
+        boolean isNumber = sc.hasNextInt();
+        while(!isNumber){
+            try{
+                System.out.println("Enter a number: ");
+                int number = sc.nextInt();
+                if(number < 0){
+                    System.out.println("Your number is - " + number + " this is a negative number.");
+                }else if(number > 0){
+                    System.out.println("Your number is - " + number + " this is a positive number.");
+                }else{
+                    System.out.println("You number is - " + number + " Oh! This is zero!");
+                }
+                isNumber = true;
+            }catch(Exception e){
                 System.out.println("You should have type a number! Please, try again!");
                 sc.next();
             }
