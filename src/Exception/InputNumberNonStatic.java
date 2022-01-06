@@ -96,7 +96,28 @@ public class InputNumberNonStatic {
                 }
                 isNumber = true;
             } catch (Exception e) {
-                System.out.println("You should have type a number! Please, try again!");
+                System.out.println("You should have typed a number! Please, try again!");
+                sc.next();
+            }
+        }
+    }
+
+    public void endlessLoopWithBooleanReversed() {
+        boolean noNumberProvided = true;
+        while (noNumberProvided) {
+            try {
+                System.out.println("Enter a number: ");
+                int number = sc.nextInt();
+                if (number < 0) {
+                    System.out.println("Your number is - " + number + " this is a negative number.");
+                } else if (number > 0) {
+                    System.out.println("Your number is - " + number + " this is a positive number.");
+                } else {
+                    System.out.println("You number is - " + number + " Oh! This is zero!");
+                }
+                noNumberProvided = false;
+            } catch (Exception e) {
+                System.out.println("You should have typed a number! Please, try again!");
                 sc.next();
             }
         }
@@ -139,6 +160,19 @@ public class InputNumberNonStatic {
                 isNumber = true;
             } catch (Exception e) {
                 System.out.println("You should have type a number! Please, try again!");
+                sc.next();
+            }
+        }
+    }
+
+    public void useForLoop() {
+        for (boolean isNumber = false; isNumber == false; ) {
+            try {
+                System.out.println("Enter a number: ");
+                int number = sc.nextInt();
+                isNumber = true;
+            } catch (Exception e) {
+                System.out.println("You should have typed a number! Please, try again!");
                 sc.next();
             }
         }

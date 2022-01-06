@@ -21,11 +21,12 @@ public class Rainbow {
         return rainbowList;
     }
 
-    //    public void printCollection(List<String> collection){
+//    public void printCollection(List<String> collection){
 //        for(String tmp : collection){
 //            System.out.println(tmp);
 //        }
 //    }
+
     public String findString(String stringToFind, List<String> collection) {
         String s = null;
         for (String tmp : collection) {

@@ -7,6 +7,7 @@ public class ArrayTask {
 
     public static void main(String[] args) {
         int[] myArray = {1, 3, 50, 10, 2}; // 1
+
 //        shouldToResearchArray(myArray);
 //        shouldToResearchArray2(myArray);
         shouldToResearchArray3(myArray);
@@ -95,15 +96,14 @@ public class ArrayTask {
     }
 
     public static void shouldToResearchArray3(int[] array) { // 2
-        int[] newArray = array; // 2 = 3
-        newArray[0] = 4;
-        newArray[3] = 9;
-        for (int i : newArray) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+
+        array[0] = 4;
+        array[3] = 9;
+
         for (int i : array) {
             System.out.print(i + " ");
         }
+
+        System.out.println();
     }
 }

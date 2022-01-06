@@ -11,10 +11,10 @@ import java.util.Scanner;
 public class InputNumber {
     public static void main(String[] args) {
         InputNumberNonStatic nonStatic = new InputNumberNonStatic();
-//        nonStatic.endlessLoopWithBoolean();
+        nonStatic.endlessLoopWithBoolean();
 //        nonStatic.endlessLoopWithFor();
 //        nonStatic.endlessLoopWithDoWhile();
-        nonStatic.endlessLoopWithDoWhileBoolean();
+//        nonStatic.endlessLoopWithDoWhileBoolean();
 //        endlessLoopTillSuccess();
 
     }
