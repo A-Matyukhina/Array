@@ -73,14 +73,14 @@ public class ArrayTask {
     2) передать в метод и там изменить - так, как мы смотрели с инт и объектами. int[]
      */
     public static void shouldToResearchArray(int[] array) {
-        int[] newArray = array;
-        for (int i : newArray) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+//        int[] newArray = array;
         for (int i : array) {
             System.out.print(i + " ");
         }
+//        System.out.println();
+//        for (int i : array) {
+//            System.out.print(i + " ");
+//        }
     }
 
     public static void shouldToResearchArray2(int[] array) {
