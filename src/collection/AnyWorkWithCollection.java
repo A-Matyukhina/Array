@@ -7,6 +7,6 @@ public class AnyWorkWithCollection {
 //        System.out.println(rainbow.findStringFirstVersion("'R' - is for red", rainbow.createCollection()));
 
 
-        System.out.println(rainbow.findString2("\'V\' - is for Violet", rainbow.createCollection()));
+        System.out.println(rainbow.findString2("'V' - is for Violet", rainbow.createCollection()));
     }
 }
