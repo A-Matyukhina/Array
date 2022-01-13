@@ -3,6 +3,11 @@ package arrayArray;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/*
+Создать динамический массив строк. Добавлять в массив строки, вводимые с клавиатуры пользователем,
+до тех пор, пока пользователь не введёт команду СТОП.
+Вывести на экран все элементы массива через запятую и их количество.
+*/
 public class AnyWorkWithArray {
 
     public String[] createArray() {
@@ -25,6 +30,7 @@ public class AnyWorkWithArray {
     }
 
     public void print(String[] array) {
+        System.out.println("Length: " + array.length);
         for (int i = 0; i < array.length; i++) {
             if (i == array.length - 1) {
                 System.out.print(array[i]);
