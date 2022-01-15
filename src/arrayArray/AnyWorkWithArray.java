@@ -9,11 +9,16 @@ import java.util.Scanner;
 Вывести на экран все элементы массива через запятую и их количество.
 */
 public class AnyWorkWithArray {
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
 
     public String[] createArray() {
         Scanner sc = new Scanner(System.in);
         String[] myArray = new String[10];
         int size = 0;
+        System.out.println(ANSI_PURPLE + "Please enter any number of lines." + "\n" +
+                "After entering each line, press \'enter\'." + "\n" +
+                "When you've done type the lines, enter the word \'stop\'" + ANSI_RESET);
         for (int i = 0; i < myArray.length; i++) {
             String s = sc.next();
             if (s.equalsIgnoreCase("stop")) {
@@ -30,12 +35,22 @@ public class AnyWorkWithArray {
     }
 
     public void print(String[] array) {
-        System.out.println("Length: " + array.length);
+        int arraySize = 0;
         for (int i = 0; i < array.length; i++) {
-            if (i == array.length - 1) {
-                System.out.print(array[i]);
+            if (array[i] != null) {
+                arraySize++;
+            }
+        }
+        System.out.println("Length: " + arraySize);
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != null) {
+                if (i == arraySize - 1) {
+                    System.out.print(array[i]);
+                } else {
+                    System.out.print(array[i] + ", ");
+                }
             } else {
-                System.out.print(array[i] + ", ");
+                break;
             }
         }
     }
