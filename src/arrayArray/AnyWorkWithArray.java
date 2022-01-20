@@ -16,7 +16,7 @@ public class AnyWorkWithArray {
         Scanner sc = new Scanner(System.in);
         String[] myArray = new String[10];
         int size = 0;
-        System.out.println(ANSI_PURPLE + "Please enter any number of lines." + "\n" +
+        System.out.println(ANSI_PURPLE + "Please enter any number of lines." + "\n" + //was added for coordinate the user's action.
                 "After entering each line, press \'enter\'." + "\n" +
                 "When you've done type the lines, enter the word \'stop\'" + ANSI_RESET);
         for (int i = 0; i < myArray.length; i++) {
@@ -35,7 +35,7 @@ public class AnyWorkWithArray {
     }
 
     public void print(String[] array) {
-        int arraySize = 0;
+        int arraySize = 0; // was added for correct output array's size.
         for (int i = 0; i < array.length; i++) {
             if (array[i] != null) {
                 arraySize++;
@@ -43,7 +43,7 @@ public class AnyWorkWithArray {
         }
         System.out.println("Length: " + arraySize);
         for (int i = 0; i < array.length; i++) {
-            if (array[i] != null) {
+            if (array[i] != null) { // was added for correct output of elements.
                 if (i == arraySize - 1) {
                     System.out.print(array[i]);
                 } else {
