@@ -16,13 +16,13 @@ public class AnyWorkWithDynArray2 {
             String s = sc.next();
             if(!s.equalsIgnoreCase("stop")) {
                 newArrayList.add(s);
-            }
-            if (s.equalsIgnoreCase("stop")) {
+            } else {
                 stop = true;
             }
         } while (!stop);
         return newArrayList;
     }
+
     public void printArrayList(List<String> arrayList){
         if(arrayList.isEmpty()){
             throw new NullPointerException();

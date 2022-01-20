@@ -1,4 +1,4 @@
-package String;
+package objects;
 
 public class StringTest {
     public static void main(String[] args) {

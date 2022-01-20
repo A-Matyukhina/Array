@@ -54,4 +54,18 @@ public class AnyWorkWithArray {
             }
         }
     }
+
+    public void printDifferently(String[] array) {
+        int length = 0;
+        for (int i = 0; i < array.length; i++) {
+            if(array[i] != null) {
+                length++;
+                System.out.println(array[i]);
+            }
+            else {
+                break;
+            }
+        }
+        System.out.println("Length: "+length);
+    }
 }
