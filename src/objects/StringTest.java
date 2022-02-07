@@ -8,8 +8,8 @@ public class StringTest {
 //
 //        System.out.println(s.toUpperCase());
 //        s = s.toUpperCase();
-//        s = s.replace("n", "m");
-//        System.out.println(s);
+        s = s.replace("n", "m");
+        System.out.println(s);
         s = s.replace("I'n", "I'm");
         System.out.println(s);
     }

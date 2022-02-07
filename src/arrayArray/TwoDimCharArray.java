@@ -13,7 +13,8 @@ public class TwoDimCharArray {
         Random r = new Random();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter two integers for the lengths of a two-dimensional array: ");
-        int A = sc.nextInt(), B = sc.nextInt();
+        int A = sc.nextInt();
+        int B = sc.nextInt();
         char[][] charArray = new char[A][B];
         for (int i = 0; i < A; i++) {
             for (int j = 0; j < B; j++) {

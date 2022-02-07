@@ -11,7 +11,8 @@ public class TwoDimIntArrays {
         Scanner sc = new Scanner(System.in);
         Random r = new Random();
         System.out.println("Enter two integers for the lengths of a two-dimensional array, integers should be greater than zero: ");
-        int A = sc.nextInt(), B = sc.nextInt();
+        int A = sc.nextInt();
+        int B = sc.nextInt();
         int[][] intArray = new int[A][B];
         for (int i = 0; i < A; i++) {
             for (int j = 0; j < B; j++) {
@@ -24,7 +25,7 @@ public class TwoDimIntArrays {
         for (int i = 0; i < intArray.length; i++) {
             for (int j = 0; j < intArray[i].length; j++) {
                 if (j == 0) {
-                    intArray[i][j] = intArray[i][j] * 2;
+                    intArray[i][j] *= 2;
                 }
                 System.out.print("\t" + intArray[i][j]);
             }
