@@ -29,6 +29,11 @@ public final class Cat {
         return new Cat(name, weight, age);
     }
 
+    public Cat withName(String newName) {
+    // this.name = newName;
+        return new Cat(newName, this.weight, this.age);
+    }
+
     @Override
     public String toString(){
         return name + " , " + weight + " , " + age + ".";
